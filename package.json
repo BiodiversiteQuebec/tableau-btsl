@@ -30,7 +30,8 @@
     "start": "vite",
     "build": "vite build",
     "dev": "vite",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "toquebio": "vite build --base /connect-btsl/ && scp -P 535 -r build/* quebio@quebio.ca:/var/www/quebio.ca/quebio_new/connect-btsl/"
   },
   "type": "module",
   "devDependencies": {

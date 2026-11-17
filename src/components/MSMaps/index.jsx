@@ -83,12 +83,20 @@ export default function App() {
           />
         ) : null}
         <LayersControl position="topright">
-          <LayersControl.BaseLayer checked name="Carte de base">
+          <LayersControl.BaseLayer checked name="Carte de base OSM">
+            <TileLayer
+              zIndex={4}
+              style={{ zIndex: 4 }}
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+            />
+          </LayersControl.BaseLayer>
+          <LayersControl.BaseLayer name="Carte de base MapTiler">
             <TileLayer
               zIndex={4}
               style={{ zIndex: 4 }}
               url={`https://api.maptiler.com/maps/outdoor-v4/256/{z}/{x}/{y}{r}.png?key=${import.meta.env.VITE_MAPTILER_API_KEY}`}
-              attribution='&copy; <a href="http://osm.org/copyright">MapTiler</a> contributors'
+              attribution='&copy; MapTiler'
             />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Carte satellite">
@@ -97,14 +105,6 @@ export default function App() {
               style={{ zIndex: 4 }}
               url="https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}"
               attribution="Tiles &copy; Esri &mdash; Source: Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community"
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Carte OSM">
-            <TileLayer
-              zIndex={4}
-              style={{ zIndex: 4 }}
-              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
             />
           </LayersControl.BaseLayer>
         </LayersControl>

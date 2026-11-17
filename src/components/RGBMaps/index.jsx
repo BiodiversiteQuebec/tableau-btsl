@@ -27,7 +27,7 @@ export default function App() {
         maxZoom={25}
       >
         <TileLayer
-           url={`https://api.maptiler.com/maps/outdoor-v4/256/{z}/{x}/{y}{r}.png?key=${import.meta.env.VITE_MAPTILER_API_KEY}`}
+           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
         />
         <GeoRaster url={RGB_COG} />
