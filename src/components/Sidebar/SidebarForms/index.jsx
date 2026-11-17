@@ -22,7 +22,7 @@ import GroupedSelect from "../../CustomSelector/GroupingSelector";
 import Selector from "../../CustomSelector/Selector";
 import Button from "@mui/material/Button";
 import Dialog from "@mui/material/Dialog";
-import Switch, { SwitchProps } from "@mui/material/Switch";
+import Switch from "@mui/material/Switch";
 import FormControlLabel from "@mui/material/FormControlLabel";
 import Typography from "@mui/material/Typography";
 import { styled } from "@mui/material/styles";

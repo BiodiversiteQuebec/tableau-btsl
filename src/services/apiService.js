@@ -64,9 +64,9 @@ const removeDoublesFromList = (list) => [...new Set(list)];
  */
 export const get_taxa_scientific_name = async () => {
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL,
+    import.meta.env.VITE_BASEURL,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Accept-Profile": "api",
     },
     {
@@ -87,9 +87,9 @@ export const get_taxa_scientific_name = async () => {
  */
 export const get_scenarios = async () => {
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL,
+    import.meta.env.VITE_BASEURL,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Accept-Profile": "api",
     },
     {
@@ -111,9 +111,9 @@ export const get_scenarios = async () => {
  */
 export const get_year_slider = async () => {
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL,
+    import.meta.env.VITE_BASEURL,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Accept-Profile": "api",
     },
     {
@@ -165,9 +165,9 @@ export const get_envelopes = async ({
   in_scenario,
 }) => {
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL,
+    import.meta.env.VITE_BASEURL,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Accept-Profile": "api",
     },
     {
@@ -192,9 +192,9 @@ export const get_summary = async ({
   projected_envelopes_id,
 }) => {
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL,
+    import.meta.env.VITE_BASEURL,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Accept-Profile": "api",
     },
     {
@@ -213,9 +213,9 @@ export const get_summary = async ({
  */
 export const get_match_taxa = async ({ name }) => {
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL_ATLAS,
+    import.meta.env.VITE_BASEURL_ATLAS,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Content-Profile": "api",
       "Accept-Profile": "api",
     },
@@ -234,9 +234,9 @@ export const get_match_taxa_list = async () => {
   const taxalist = await get_taxa_scientific_name();
 
   let paramObj = getRequestParams(
-    process.env.REACT_APP_BASEURL_ATLAS,
+    import.meta.env.VITE_BASEURL_ATLAS,
     {
-      Authorization: `Bearer ${process.env.REACT_APP_BEARER}`,
+      Authorization: `Bearer ${import.meta.env.VITE_BEARER}`,
       "Content-Profile": "api",
       "Accept-Profile": "api",
       select: "vernacular_en,vernacular_fr,group_en,group",

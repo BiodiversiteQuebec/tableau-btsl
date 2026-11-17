@@ -87,16 +87,8 @@ export default function App() {
             <TileLayer
               zIndex={4}
               style={{ zIndex: 4 }}
-              url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager_nolabels/{z}/{x}/{y}{r}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">Carto</a> contributors'
-            />
-          </LayersControl.BaseLayer>
-          <LayersControl.BaseLayer name="Carte noir et blanc">
-            <TileLayer
-              zIndex={4}
-              style={{ zIndex: 4 }}
-              url="https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.png"
-              attribution='&copy; <a href="http://osm.org/copyright">Stamen</a> contributors'
+              url={`https://api.maptiler.com/maps/outdoor-v4/256/{z}/{x}/{y}{r}.png?key=${import.meta.env.VITE_MAPTILER_API_KEY}`}
+              attribution='&copy; <a href="http://osm.org/copyright">MapTiler</a> contributors'
             />
           </LayersControl.BaseLayer>
           <LayersControl.BaseLayer name="Carte satellite">

@@ -36,7 +36,7 @@ function TileTimeSeries(props) {
     cartoDark: "https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png",
     thunderforest:
       "https://{s}.tile.thunderforest.com/mobile-atlas/{z}/{x}/{y}.png",
-    mapbox: `https://api.mapbox.com/styles/v1/glaroc/cl8eqr05i000416umaxkuc4sp/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`,
+    mapbox: `https://api.mapbox.com/styles/v1/glaroc/cl8eqr05i000416umaxkuc4sp/tiles/256/{z}/{x}/{y}@2x?access_token=${import.meta.env.VITE_MAPBOX_TOKEN}`,
   };
 
   function hexToRgb(hex) {
@@ -96,7 +96,7 @@ function TileTimeSeries(props) {
 
   useEffect(() => {
     if (url !== "" && typeof url !== "undefined") {
-      const tiler = `https://tiler.biodiversite-quebec.ca/cog/tiles/{z}/{x}/{y}@2x.png`;
+      const tiler = `https://tiler2.biodiversite-quebec.ca/cog/tiles/WebMercatorQuad/{z}/{x}/{y}.png`;
       let rescale = "";
       let resampling = "";
       let nodata = "";
